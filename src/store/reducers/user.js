@@ -7,17 +7,17 @@ const initState = {
 }
 
 export default (state = initState, active) => {
-  switch (active.types) {
+  switch (active.type) {
     case actionType.SET_USER_INFO:
-      return Object.assign({}, initState, {
+      return Object.assign({}, state, {
         userinfo: active.userinfo
       })
     case actionType.SET_LOGIN_STATUS:
-      return Object.assign({}, initState, {
+      return Object.assign({}, state, {
         isLogin: active.value
       })
     case actionType.SET_TOKEN:
-      return Object.assign({}, initState, {
+      return Object.assign({}, state, {
         token: active.value
       })
     default:
